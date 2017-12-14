@@ -1,0 +1,19 @@
+.TimeLapse{
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 800px;
+    height: 600px;
+    background-color: #666666;
+}
+.TimeLapse-controls {
+    width: 100%;
+    overflow: auto;
+
+}
+.TimeLapse-controls #btnNextImage {
+    float: right;
+}
+.TimeLapse-controls #btnPrevImage {
+    float: left;
+    
+}
