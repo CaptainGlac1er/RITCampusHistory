@@ -2,7 +2,6 @@
     margin: 0 auto;
     padding: 10px;
     max-width: 800px;
-    height: 600px;
     background-color: #666666;
 }
 .TimeLapse-image{
@@ -18,14 +17,15 @@
     padding-right: inherit;
     left: 0;
     right: 0;
-    background-color: black
+    background-color: black;
+    height: 30px;
 }
 .TimeLapse-image-controls button{
     background-color: black;
     color: white;
     border: none;
     padding: 5px;
-    height: 30px;
+    height: inherit;
     width: 100px;
 }
 .TimeLapse-image-controls button:hover{
@@ -40,10 +40,10 @@
     
 }
 .TimeLapse-image-controls #title{
-    margin: 0 auto;
     color: white;
+    height: inherit;
     text-align: center;
-    vertical-align: middle;
+    line-height: 30px;
 }
 #currentImage{
     width: 100%;

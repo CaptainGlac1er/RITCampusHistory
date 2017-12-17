@@ -42,6 +42,19 @@ class TimeLapse extends Component {
 
   render() {
     var currentData = this.state.data[this.state.index];
+    let buildings = currentData.buildings.map((value)=>{
+        return(
+          <li>{value}</li>
+        );
+    });
+    let buildingsArea = (currentData.buildings.length > 0) ? (
+          <p>
+            Buildings Built:
+            <ul>
+              {buildings}
+            </ul>
+          </p>
+    ) : '';
     return (
       <div className="TimeLapse">
         <div className="TimeLapse-image">
@@ -49,7 +62,7 @@ class TimeLapse extends Component {
           <div className="TimeLapse-image-controls">
             <button id="btnNextImage" onClick={this.NextImage.bind(this)} ref={(ref) =>{this.btnNextImage = ref}}>Next Image</button>
             <button id="btnPrevImage" onClick={this.PrevImage.bind(this)} ref={(ref) =>{this.btnPrevImage = ref}} >Prev Image</button>
-            <h3 id="title" >{currentData.title}</h3>
+            <div id="title" >{currentData.title}</div>
           </div>
         </div>
         <div className="TimeLapse-text">
@@ -58,6 +71,7 @@ class TimeLapse extends Component {
           {currentData.info}
 
           </p>
+          {buildingsArea}
         </div>
       </div>
     );

@@ -1,8 +1,6 @@
 body{
   background-color: rgb(131, 131, 131);
 }
-.App {
-}
 
 .App-logo {
   float: left;
@@ -29,7 +27,7 @@ body{
   font-size: large;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #f8f7ed;
+  /*background-color: #f8f7ed;*/
   padding: 20px;
 }
 
