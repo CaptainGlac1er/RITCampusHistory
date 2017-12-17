@@ -5,15 +5,46 @@
     height: 600px;
     background-color: #666666;
 }
-.TimeLapse-controls {
-    width: 100%;
-    overflow: auto;
+.TimeLapse-image{
+    position: relative;
 
 }
-.TimeLapse-controls #btnNextImage {
+.TimeLapse-image-controls {
+    /*width: 100%;*/
+    overflow: auto;
+    position: absolute;
+    bottom: 0;
+    padding-left: inherit;
+    padding-right: inherit;
+    left: 0;
+    right: 0;
+    background-color: black
+}
+.TimeLapse-image-controls button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px;
+    height: 30px;
+    width: 100px;
+}
+.TimeLapse-image-controls button:hover{
+    background-color: white;
+    color: black;
+}
+.TimeLapse-image-controls #btnNextImage {
     float: right;
 }
-.TimeLapse-controls #btnPrevImage {
+.TimeLapse-image-controls #btnPrevImage {
     float: left;
     
+}
+.TimeLapse-image-controls #title{
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+}
+#currentImage{
+    width: 100%;
 }

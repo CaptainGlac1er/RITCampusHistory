@@ -1,5 +1,5 @@
 body{
-  background-color: #F36E21;
+  background-color: rgb(131, 131, 131);
 }
 .App {
 }
@@ -15,7 +15,7 @@ body{
   text-align: center;
   vertical-align: middle;
   
-  background-color: rgb(131, 131, 131);
+  background-color: #F36E21;
   padding: 20px;
   color:black;
   overflow: auto;

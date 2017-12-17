@@ -11,6 +11,7 @@ class TimeLapse extends Component {
   constructor(props){
     super(props);
     this.state = {
+        data: props.data,
         src: props.source,
         currentImage: images[0],
         index: 0,
@@ -19,7 +20,7 @@ class TimeLapse extends Component {
   NextImage(e){
     e.stopPropagation();
     //console.log(this.state.index);
-      if(this.state.index < images.length - 1){
+      if(this.state.index < this.state.data.length - 1){
         this.setState({index: (this.state.index + 1)},this.IndexUpdate.bind(this));
       }else{
         this.setState({index: 0},this.IndexUpdate.bind(this));
@@ -31,7 +32,7 @@ class TimeLapse extends Component {
       if(this.state.index > 0){
         this.setState({index: (this.state.index - 1)},this.IndexUpdate.bind(this));
       }else{
-        this.setState({index: images.length - 1},this.IndexUpdate.bind(this));
+        this.setState({index: this.state.data.length - 1},this.IndexUpdate.bind(this));
       }
   }
   IndexUpdate(){
@@ -40,15 +41,23 @@ class TimeLapse extends Component {
   }
 
   render() {
+    var currentData = this.state.data[this.state.index];
     return (
       <div className="TimeLapse">
-        <div className="TimeLapse-controls">
-          <button id="btnNextImage" onClick={this.NextImage.bind(this)} ref={(ref) =>{this.btnNextImage = ref}}>Next Image</button>
-          <button id="btnPrevImage" onClick={this.PrevImage.bind(this)} ref={(ref) =>{this.btnPrevImage = ref}} >Prev Image</button>
-        </div>
         <div className="TimeLapse-image">
-          <Image source={this.state.currentImage}/>
+          <Image source={currentData.image}/>
+          <div className="TimeLapse-image-controls">
+            <button id="btnNextImage" onClick={this.NextImage.bind(this)} ref={(ref) =>{this.btnNextImage = ref}}>Next Image</button>
+            <button id="btnPrevImage" onClick={this.PrevImage.bind(this)} ref={(ref) =>{this.btnPrevImage = ref}} >Prev Image</button>
+            <h3 id="title" >{currentData.title}</h3>
+          </div>
+        </div>
+        <div className="TimeLapse-text">
+          <p>
 
+          {currentData.info}
+
+          </p>
         </div>
       </div>
     );

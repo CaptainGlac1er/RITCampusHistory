@@ -11,7 +11,7 @@ class Image extends Component {
   render() {
     return (
       <div className="Image">
-        <strong>{this.props.source}</strong>
+        <img id="currentImage" src={this.props.source} alt="current year campus map"/>
       </div>
     );
   }
