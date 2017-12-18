@@ -4,6 +4,7 @@ import './App.css';
 import Main from './Pages/Main';
 import References from './Pages/References';
 import Images from './Pages/Images';
+import About from './Pages/About';
 import NavBar from './Components/NavBar';
 import { Switch, Route } from 'react-router-dom';
 
@@ -53,7 +54,7 @@ class App extends Component {
           {
             'image': require(`${'./Images/69.png'}`),
             'title':'1969',
-            'info': '',
+            'info': 'More apartments are completed for incoming students',
             'buildings': [
               'Carlton Gibson Hall',
               'Sol Heumann Hall'
@@ -62,7 +63,7 @@ class App extends Component {
           {
             'image': require(`${'./Images/70.png'}`),
             'title':'1970',
-            'info': '',
+            'info': 'Temporary apartments were added to handle more students',
             'buildings': [
               'Riverknoll Apartments',
               'Peter Peterson Hall',
@@ -148,7 +149,7 @@ class App extends Component {
           {
             'image': require(`${'./Images/00.png'}`),
             'title':'2000',
-            'info': '',
+            'info': 'The first of the fully furnished apartment buildings were built',
             'buildings': [
               'Crossroads',
               'University Commons I',
@@ -219,7 +220,7 @@ class App extends Component {
           {
             'image': require(`${'./Images/10.png'}`),
             'title':'2010',
-            'info': '',
+            'info': 'The start of the Global Village project that replaced some of the degrading riverknoll apartments with newer apartments',
             'buildings': [
               'Global Village',
               'Global Way Building 1',
@@ -271,6 +272,7 @@ class App extends Component {
           <Route exact path='/' component={() => <Main images={this.state.images}/> }/>
           <Route exact path='/References' component={References} />
           <Route exact path='/Images' component={Images} />
+          <Route exact path='/About' component={About} />
         </Switch>
       </div>
     );

@@ -1,21 +1,26 @@
 .NavBar{
     text-align: center;
+    background-color: black;
     /*padding: 20px;*/
 }
 .NavBar a{
     display: inline-block;
-    background-color: gray;
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 15px;
     width: 100px;
-    margin-left: 10px;
-    margin-right: 10px;
-    -webkit-box-shadow: inset 0px -9px 172px -47px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset 0px -9px 172px -47px rgba(0,0,0,0.75);
-    box-shadow: inset 0px -9px 172px -47px rgba(0,0,0,0.75);
 
 }
 .NavBar a:hover{
     background-color: lightgray;
+    color: black;
+}
+@media only screen and (max-width: 600px){
+    .NavBar a{
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

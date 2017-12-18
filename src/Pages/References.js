@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import {Link} from 'react-router-dom';
 
 class References extends Component{
     constructor(props){
@@ -12,9 +11,10 @@ class References extends Component{
         return (
             <div className="App-content">
                 <ul>
-                    <li><Link to={'https://digitalarchive.rit.edu/xmlui/'}>RIT Digital Archives</Link></li>
-                    <li><Link to={'http://library.rit.edu/depts/archives/the-rit-museum'}>RIT Archives</Link></li>
-                    <li>Joseph Pietruch</li>
+                    <li><a href='https://digitalarchive.rit.edu/xmlui/'>RIT Digital Archives</a></li>
+                    <li><a href='http://library.rit.edu/depts/archives/the-rit-museum'>RIT Archives</a></li>
+                    <li><a href="https://reporter.rit.edu/">RIT Reporter</a></li>
+                    <li><a href="http://www.rit.edu/lookup/display.php?uid=jryfms&key=23ceaed8ab2f02ecb50506468fb70a888e4e2f95">James Yarrington</a></li>
                 </ul>
             </div>
         );
