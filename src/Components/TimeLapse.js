@@ -44,16 +44,24 @@ class TimeLapse extends Component {
     var currentData = this.state.data[this.state.index];
     let buildings = currentData.buildings.map((value)=>{
         return(
-          <li>{value}</li>
+          <li key={value}>{value}</li>
         );
     });
     let buildingsArea = (currentData.buildings.length > 0) ? (
-          <p>
-            Buildings Built:
+          <div>
+            <h3>Buildings Built:</h3>
             <ul>
               {buildings}
             </ul>
-          </p>
+          </div>
+    ) : '';
+    let infoArea = (currentData.info.length > 0) ? (
+          <div>
+            <h3>Year Info:</h3>
+            <p>
+              {currentData.info}
+            </p>
+          </div>
     ) : '';
     return (
       <div className="TimeLapse">
@@ -66,11 +74,7 @@ class TimeLapse extends Component {
           </div>
         </div>
         <div className="TimeLapse-text">
-          <p>
-
-          {currentData.info}
-
-          </p>
+          {infoArea}
           {buildingsArea}
         </div>
       </div>

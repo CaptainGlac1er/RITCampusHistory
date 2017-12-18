@@ -1,0 +1,21 @@
+.NavBar{
+    text-align: center;
+    /*padding: 20px;*/
+}
+.NavBar a{
+    display: inline-block;
+    background-color: gray;
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    width: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    -webkit-box-shadow: inset 0px -9px 172px -47px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px -9px 172px -47px rgba(0,0,0,0.75);
+    box-shadow: inset 0px -9px 172px -47px rgba(0,0,0,0.75);
+
+}
+.NavBar a:hover{
+    background-color: lightgray;
+}
