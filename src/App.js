@@ -230,7 +230,7 @@ class App extends Component {
           {
             'image': require(`${'./Images/13.png'}`),
             'title':'2013',
-            'info': '',
+            'info': '3 new buildings that follow LEED certification',
             'buildings': [
               'Rosica Hall',
               'Institute Hall',
@@ -240,7 +240,7 @@ class App extends Component {
           {
             'image': require(`${'./Images/14.png'}`),
             'title':'2014',
-            'info': '',
+            'info': 'RIT constructs new ice rink',
             'buildings': [
               'Polisseni Ice Arena',
             ],
